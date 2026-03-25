@@ -1,0 +1,15 @@
+<Solution>
+  <Folder Name="/Docs/">
+    <File Path="README.md" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/WiqlBuilder/WiqlBuilder.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/WiqlBuilder.Tests/WiqlBuilder.Tests.csproj" />
+  </Folder>
+</Solution>

@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<PackageId>WiqlBuilder</PackageId>
+		<Authors>Joel Howe</Authors>
+		<Company>Personal Projects</Company>
+		<Description>A fluent, strongly-typed WIQL query builder for .NET.</Description>
+		<PackageTags>wiql azure-devops query-builder dotnet</PackageTags>
+		<RepositoryUrl>https://github.com/JoelAndHowe/WiqlBuilder</RepositoryUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	</PropertyGroup>
+</Project>
