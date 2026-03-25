@@ -1,7 +1,7 @@
 ﻿name: publish-nuget
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:  
 
 jobs:
   publish:
@@ -12,12 +12,22 @@ jobs:
 
       - uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 8.0.x
+          dotnet-version: 10.0.x  
 
-      - run: dotnet restore
-      - run: dotnet build --configuration Release
-      - run: dotnet test --configuration Release
+      - name: Restore
+        run: dotnet restore
 
-      - run: dotnet pack src/WiqlBuilder/WiqlBuilder.csproj -c Release -o ./artifacts
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
 
-      - run: dotnet nuget push "./artifacts/*.nupkg" --api-key "${{ secrets.NUGET_API_KEY }}" --source https://api.nuget.org/v3/index.json
+      - name: Test
+        run: dotnet test --configuration Release --no-build
+
+      - name: Pack
+        run: dotnet pack src/WiqlBuilder/WiqlBuilder.csproj -c Release --no-build -o ./artifacts
+
+      - name: Publish to NuGet
+        run: dotnet nuget push "./artifacts/*.nupkg" \
+          --api-key "${{ secrets.NUGET_API_KEY }}" \
+          --source https://api.nuget.org/v3/index.json \
+          --skip-duplicate
