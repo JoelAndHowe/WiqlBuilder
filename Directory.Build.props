@@ -1,18 +1,18 @@
 ﻿<Project>
-  <PropertyGroup>
-    <!-- Namespace enforcement -->
-    <RootNamespace>$(MSBuildProjectName)</RootNamespace>
+	<PropertyGroup>
+		<!-- Namespace enforcement -->
+		<RootNamespace>$(MSBuildProjectName)</RootNamespace>
+		<Version>1.0.1</Version>
+		<!-- Language / compiler -->
+		<LangVersion>latest</LangVersion>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
 
-    <!-- Language / compiler -->
-    <LangVersion>latest</LangVersion>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-
-    <!-- Packaging -->
-	  <!--<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<!-- Packaging -->
+		<!--<GenerateDocumentationFile>true</GenerateDocumentationFile>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors> -->
 
-    <!-- Deterministic builds -->
-    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
-  </PropertyGroup>
+		<!-- Deterministic builds -->
+		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+	</PropertyGroup>
 </Project>

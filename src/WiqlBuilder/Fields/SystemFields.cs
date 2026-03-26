@@ -11,6 +11,8 @@ public static class SystemFields
     public static readonly PathFieldReference IterationPath = new("System.IterationPath");
     public static readonly DateTimeFieldReference CreatedDate = new("System.CreatedDate");
     public static readonly DateTimeFieldReference ChangedDate = new("System.ChangedDate");
+    public static readonly DateTimeFieldReference ClosedDate = new("Closed Date");
+    public static readonly DateTimeFieldReference ResolvedDate = new("Resolved Date");
     public static readonly StringFieldReference Tags = new("System.Tags");
 }
 
