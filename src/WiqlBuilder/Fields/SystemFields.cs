@@ -14,6 +14,7 @@ public static class SystemFields
     public static readonly DateTimeFieldReference ClosedDate = new("Closed Date");
     public static readonly DateTimeFieldReference ResolvedDate = new("Resolved Date");
     public static readonly StringFieldReference Tags = new("System.Tags");
+    public static readonly IntFieldReference StoryPoints = new("Story Points");
 }
 
 
